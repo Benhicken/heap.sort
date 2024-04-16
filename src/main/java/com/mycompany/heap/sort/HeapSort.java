@@ -13,6 +13,8 @@ import java.util.Scanner;
  */
 public class HeapSort {
     
+    int swapCount = 0; // Counter to track the number of swaps
+
     public void runHeapSort(int[] a)
     {
         // Performs the 'heapify' using only the first half of the array
@@ -58,6 +60,8 @@ public class HeapSort {
             int temp = a[i];
             a[i] = a[largest];
             a[largest] = temp;
+
+            swapCount++; // Increment swap counter
             
             // Check to see if the swapped node needs to be swapped again.
             heapify(a, length, largest);
@@ -91,6 +95,8 @@ public class HeapSort {
         
         System.out.print("Sorted Array: ");
         printArray(a);
+
+        System.out.println("Number of Swaps: " + ob.swapCount); // Print number of swaps
     }
     
     static void printArray(int arr[])
