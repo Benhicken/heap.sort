@@ -40,12 +40,14 @@ public class HeapSort {
         
         // Test to see if the value of the left node is greater than the parent node
         if (left < length && a[left] > a[largest])
+        //if (left < length && a[left] < a[largest])
         {
             largest = left;
         }
         
         // Test to see if the value of the right node is greater than the parent node
         if (right < length && a[right] > a[largest])
+        //if (right < length && a[right] < a[largest])
         {
             largest = right;
         }
